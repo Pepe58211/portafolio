@@ -1,0 +1,231 @@
+.project-hero {
+  padding: 5rem 0 3rem;
+}
+
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  line-height: 1.05;
+  margin: 1rem 0 1.2rem;
+}
+
+.project-hero-text p {
+  color: var(--text-soft);
+  max-width: 680px;
+  font-size: 1.05rem;
+}
+
+.project-hero-visual {
+  min-height: 340px;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(94, 234, 212, 0.22),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hero-visual::before {
+  display: none;
+}
+
+.project-meta,
+.project-section,
+.project-gallery,
+.project-nav {
+  padding: 2rem 0 4rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.meta-card,
+.content-card,
+.gallery-card,
+.project-nav-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.meta-card span {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.meta-card p {
+  color: var(--text-soft);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.content-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.content-card p {
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.highlight-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.9rem;
+  color: var(--text-soft);
+}
+
+.highlight-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-card {
+  min-height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(94, 234, 212, 0.1)
+  );
+}
+
+.gallery-card span {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.project-nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-nav-box h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .project-hero-grid,
+  .meta-grid,
+  .content-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-nav-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.gallery-card {
+  min-height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(94, 234, 212, 0.1)
+  );
+  overflow: hidden;
+  padding: 0;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.04);
+}
+.project-hero-visual {
+  min-height: 340px;
+  height: 340px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  background: #0f1724;
+}
+
+.project-hero-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.project-item-visual {
+  min-height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(94, 234, 212, 0.22),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-item-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-item-visual img {
+  transform: scale(1.04);
+}
+
